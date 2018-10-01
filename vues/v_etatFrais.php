@@ -1,7 +1,9 @@
 ﻿<div class="col-md-6">
 	<div class="content-box-large">
 		<div class="panel-heading">
-                    <div class="panel-title"><h2>Fiche de frais du mois <?php echo $tableMois[$numMois]." ".$numAnnee?> :</h2></div>
+
+      <div class="panel-title"><h2>Fiche de frais du mois <?php echo $tableMois[$numMois]." ".$numAnnee?> :</h2><a href="#"><span class="glyphicon glyphicon-print"></span></a></div>
+
 		</div>
 		<div class="panel-body">
 				</br></br>

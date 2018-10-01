@@ -23,25 +23,24 @@
       *********************************************************************************************************************************************************** -->
 
 <div class="page-content container">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<div class="login-wrapper">
-				<div class="box">
-					<div class="content-wrap">
-						<legend>Se connecter</legend>
-							<form method="post" action="index.php?uc=connexion&action=valideConnexion">
-								<input name="login" class="form-control" type="text" placeholder="Login">
-								<input name="mdp" class="form-control" type="password" placeholder="Password">
-								</br>
-								<input type="submit" class="btn btn-primary signup" value="Login">
-							</form>
-							</br>
-						
-					</div>							
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-wrapper">
+                <div class="box">
+                    <div class="content-wrap">
+                        <legend>Se connecter</legend>
+                        <form method="post" action="index.php?uc=connexion&action=valideConnexion">
+                            <input name="login" class="form-control" type="text" placeholder="Login" required>
+                                <input name="mdp" class="form-control" type="password" placeholder="Password" required>
+                                </br>
+                                <input type="submit" class="btn btn-primary signup" value="Login">
+                        </form>
+                        </br>
+                    </div>							
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
