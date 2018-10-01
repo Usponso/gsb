@@ -13,13 +13,14 @@
 							$mois = $unMois['mois'];
 							$numAnnee =  $unMois['numAnnee'];
 							$numMois =  $unMois['numMois'];
+                                                        $tableMois = ['','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 							if($mois == $moisASelectionner){
 							?>
-							<option selected value="<?php echo $mois ?>"><?php echo  $numMois."/".$numAnnee ?> </option>
+							<option selected value="<?php echo $mois ?>"><?php echo  $tableMois[$numMois]." ".$numAnnee ?> </option>
 							<?php 
 							}
 							else{ ?>
-							<option value="<?php echo $mois ?>"><?php echo  $numMois."/".$numAnnee ?> </option>
+							<option value="<?php echo $mois ?>"><?php echo  $tableMois[$numMois]." ".$numAnnee ?> </option>
 							<?php 
 							}
 						
