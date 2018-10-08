@@ -1,6 +1,5 @@
 <?php
 
-
 include("vues/v_sommaire.php");
 $idVisiteur = $_SESSION['idVisiteur'];
 $mois = getMois(date("d/m/Y"));
@@ -9,7 +8,6 @@ $numMois =substr( $mois,4,2);
 $action = $_REQUEST['action'];
 switch($action){
 	case 'saisirFrais':{
-            echo "ok";
 		if($pdo->estPremierFraisMois($idVisiteur,$mois)){
 			$pdo->creeNouvellesLignesFrais($idVisiteur,$mois);
 		}
@@ -22,7 +20,7 @@ switch($action){
 	  	 	$pdo->majFraisForfait($idVisiteur,$mois,$lesFrais);
 		}
 		else{
-			ajouterErreur("Les valeurs des frais doivent �tre num�riques");
+			ajouterErreur("Les valeurs des frais doivent être numériques");
 			include("vues/v_erreurs.php");
 		}
 	  break;

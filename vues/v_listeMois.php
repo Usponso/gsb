@@ -29,8 +29,8 @@
 								   ?>    
 					</select>
 					<div class="form-horizontal">
+                                                <br/>
 						<input class="form-control" id="ok" type="submit" value="Valider" />
-						<input class="form-control" id="annuler" type="reset" value="Effacer"/>
 					</div>
 				</form>
 			</div>

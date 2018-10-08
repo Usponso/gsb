@@ -2,7 +2,7 @@
 	<div class="content-box-large">
 		<div class="panel-heading">
 
-      <div class="panel-title"><h2>Fiche de frais du mois <?php echo $tableMois[$numMois]." ".$numAnnee?> :</h2><a href="#"><span class="glyphicon glyphicon-print"></span></a></div>
+      <div class="panel-title"><h2>Fiche de frais du mois <?php echo @$tableMois[$numMois]." ".$numAnnee?> :</h2></div>
 
 		</div>
 		<div class="panel-body">
@@ -12,7 +12,7 @@
 	
   	<table class="table">
 				</br></br>
-  	   <caption>Eléments forfaitisés </caption>
+  	   <caption>Eléments forfaitisés</caption>
         <tr>
          <?php
 		 $a = '<table><tr>';
@@ -45,7 +45,7 @@
 		</tr>
     </table>
   	<table class="table">
-  	   <caption>Descriptif des éléments hors forfait -<?php echo $nbJustificatifs ?> justificatifs reçus -
+  	   <caption>Descriptif des éléments hors forfait - <?php echo $nbJustificatifs ?> justificatifs reçus -
        </caption>
              <tr>
                 <th class="date">Date</th>
@@ -73,24 +73,25 @@
              </tr>
         <?php 
           }
-		  
 		  $a.='</tr></table>';
 		?>
     </table>
-	
-	
+    
+    <form method="POST" action="controleurs/c_deleteFiche.php">
+        <?php 
+            $mois = getMois(date("d/m/Y"));
+            $numAnnee =substr( $mois,0,4);
+            $numMois =substr( $mois,4,2);
+         ?>
+        
+        <input type="hidden" name="idV" value="<?php echo $_SESSION['idVisiteur']; ?>">
+        <input type="hidden" name="mois" value="<?php echo substr( $mois,0,4).substr( $mois,4,2); ?>">
+        
+        <button type="submit" onclick="return confirm('Confirmer la suppression de la fiche ?')"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
+        
+    </form>
+                                
+    <a href="#"><span class="glyphicon glyphicon-save"></span> Télécharger le PDF</a>
 	
   </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-

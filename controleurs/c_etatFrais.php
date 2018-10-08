@@ -10,12 +10,12 @@ switch($action){
 		// on demande toutes les clés, et on prend la première,
 		// les mois étant triés décroissants
 		$lesCles = array_keys( $lesMois );
-		$moisASelectionner = $lesCles[0];
+		@$moisASelectionner = $lesCles[0];
 		include("vues/v_listeMois.php");
 		break;
 	}
 	case 'voirEtatFrais':{
-		$leMois = $_REQUEST['lstMois']; 
+		@$leMois = $_REQUEST['lstMois']; 
 		$lesMois=$pdo->getLesMoisDisponibles($idVisiteur);
 		$moisASelectionner = $leMois;
 		include("vues/v_listeMois.php");

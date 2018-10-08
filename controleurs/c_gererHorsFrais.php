@@ -1,6 +1,5 @@
 <?php
 
-
 include("vues/v_sommaire.php");
 $idVisiteur = $_SESSION['idVisiteur'];
 $mois = getMois(date("d/m/Y"));
@@ -9,7 +8,6 @@ $numMois =substr( $mois,4,2);
 $action = $_REQUEST['action'];
 switch($action){
 	case 'saisirFrais':{
-            echo "ok";
 		if($pdo->estPremierFraisMois($idVisiteur,$mois)){
 			$pdo->creeNouvellesLignesFrais($idVisiteur,$mois);
 		}

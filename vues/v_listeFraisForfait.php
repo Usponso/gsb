@@ -17,7 +17,7 @@
 					?>
 							<div class="form-group">
 								<label for="idFrais"><?php echo $libelle ?></label>
-								<input class="form-control" placeholder="<?php echo $quantite?>" type="text" id="idFrais" name="lesFrais[<?php echo $idFrais?>]""<?php echo $quantite?>"<?php if ($lesInfosFicheFrais['idEtat']!='CR') { echo 'disabled';} ?> >
+								<input class="form-control" placeholder="<?php echo $quantite?>" type="text" id="idFrais" name="lesFrais[<?php echo $idFrais?>]"<?php echo $quantite?><?php if ($lesInfosFicheFrais['idEtat']!='CR') { echo 'disabled';} ?> >
 							</div>
 
 					<?php
